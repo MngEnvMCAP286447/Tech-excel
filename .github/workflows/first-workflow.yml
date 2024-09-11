@@ -1,0 +1,19 @@
+name: first-workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "first run"
+        default: "world"
+
+jobs:
+
+  hello:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: step 1
+      run: "echo Step 1 complete!"
